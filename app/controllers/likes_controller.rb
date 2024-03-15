@@ -27,6 +27,8 @@ class LikesController < ApplicationController
       if @like.save
         format.html { redirect_back fallback_location: root_url, notice: "Like was successfully created." }
         format.json { render :show, status: :created, location: @like }
+        format.js
+        # first step is to add format.js to both create and destroy to handle javascript response
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @like.errors, status: :unprocessable_entity }
