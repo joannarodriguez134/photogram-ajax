@@ -1,3 +1,4 @@
+<div class="follow-request">
 <%= form_with(model: follow_request, class: "d-inline-block", local: false, id: "follow_request") do |form| %>
   <% if follow_request.errors.any? %>
     <div id="error_explanation">
@@ -17,3 +18,4 @@
     <%= form.submit "Follow", class: "btn btn-outline-secondary btn-block" %>
   </div>
 <% end %>
+</div>
