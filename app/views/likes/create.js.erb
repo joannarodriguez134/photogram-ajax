@@ -1,13 +1,7 @@
-console.log("created!")
-
-<!--find the existing photo_id likes element-->
-
 var existingLikes = $("#<%= dom_id(@like.photo) %>_likes")
 
-<!--render new likes element-->
 var updatedLikes = $("<%= j(render "photos/likes", photo: @like.photo) %>");
 
-<!--replace it with a new photo_id likes element-->
 existingLikes.replaceWith(updatedLikes);
 
 var icon = $("#<%= dom_id(@like.photo) %>_likes_icon");

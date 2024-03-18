@@ -1,11 +1,4 @@
-console.log("<%= @comment.body %>")
-
 var added_comment = $("<%= j(render @comment) %>");
-
-<!--can also be written as: -->
-
-<!--var added_comment = $("<%#= j(render 'comments/comment', comment: @comment) %>");-->
-
 
 added_comment.hide();
 
